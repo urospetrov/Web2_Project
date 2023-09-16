@@ -1,0 +1,353 @@
+/* Styles for empty cart message */
+.empty-cart-message {
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+  color: #555;
+  font-weight: bold;
+}
+
+/* Styles for page title */
+.page-title {
+  color: #ff6600;
+  font-size: 28px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+/* Styles for search and sort */
+.search-and-sort {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.search-and-sort input,
+.search-and-sort select {
+  padding: 8px;
+  margin-right: 10px;
+  border: 2px solid #ffcc00;
+  border-radius: 6px;
+}
+
+.sort-order-button {
+  background-color: #ffcc00;
+  color: #333;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.4s;
+  font-size: 16px;
+}
+
+.sort-order-button:hover {
+  background-color: #ff9900;
+}
+
+/* Styles for table rows */
+.artikal-row {
+  transition: background-color 0.3s ease-in-out;
+}
+
+.artikal-row:hover {
+  background-color: #f5f5f5;
+  transform: scale(1.02);
+}
+
+/* Styles for article images */
+.artikal-image {
+  width: 120px;
+  height: auto;
+  border: 2px dashed #333;
+  border-radius: 8px;
+  margin: 10px auto;
+}
+
+/* Styles for cart icon */
+.cart-icon {
+  position: relative;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.cart-icon-image {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.cart-count {
+  background-color: #ff6600;
+  color: white;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  margin-left: 5px;
+}
+
+/* Styles for the cart section */
+.cart {
+  margin: 20px auto;
+  text-align: center;
+  padding: 30px;
+  background-color: #333;
+  border: 2px solid #ffcc00;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cart-title {
+  color: #ffcc00;
+  margin-bottom: 20px;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+.cart-items-list {
+  list-style: none;
+  padding: 0;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  color: white;
+  border-bottom: 1px solid #ffcc00;
+}
+
+/* Styles for remove item button */
+.remove-item-button {
+  background-color: #ff3333;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.4s;
+  font-size: 14px;
+}
+
+.remove-item-button:hover {
+  background-color: #ff0000;
+}
+
+/* Styles for cart and order section */
+.cart-and-order {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}
+
+/* Styles for order summary section */
+.order-summary {
+  background-color: #ffcc00;
+  border: 2px dashed #333;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  flex-basis: calc(50% - 20px);
+  margin-right: 20px;
+}
+
+.order-summary-title {
+  color: #333;
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.order-summary-amount {
+  color: #ff0000;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.pregled-porudzbine-button {
+  background-color: #333;
+  color: #ffcc00;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.4s;
+}
+
+.pregled-porudzbine-button:hover {
+  background-color: #ff9900;
+}
+
+/* Styles for order details section */
+.order-details {
+  background-color: #333;
+  border: 2px dashed #ffcc00;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  flex-basis: 45%;
+}
+
+.order-details-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.order-details-inputs label {
+  font-weight: bold;
+  color: #ffcc00;
+}
+
+.order-details-inputs input,
+.order-details-inputs textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 2px solid #ffcc00;
+  border-radius: 6px;
+  color: #333;
+  background-color: #fff;
+}
+
+.poruci-button {
+  background-color: #ff6600;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.4s;
+}
+
+.poruci-button:hover {
+  background-color: #ff3300;
+}
+
+/* Styles for the artikli table */
+.artikli-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 4px;
+  margin-bottom: 30px;
+}
+
+.table-header {
+  color: #ff9900;
+  font-weight: bold;
+  padding: 12px;
+  border-bottom: 3px solid #ff9900;
+  text-transform: uppercase;
+}
+
+/* Styles for quantity status */
+.kolicina-cell {
+  font-weight: bold;
+}
+
+.in-stock {
+  color: #00cc00;
+  font-weight: normal;
+}
+
+.out-of-stock {
+  color: #cc0000;
+  font-weight: bold;
+  text-decoration: line-through;
+}
+
+/* Styles for buttons */
+.detalji-button,
+.dodaj-u-korpu-button {
+  background-color: #ffcc00;
+  color: #333;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.4s;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.detalji-button:hover,
+.dodaj-u-korpu-button:hover {
+  background-color: #ff9900;
+}
+
+/* Styles for the details of an article */
+.detalji-artikla {
+  text-align: center;
+  padding: 30px;
+  background-color: #ffcc00;
+  border: 2px dashed #333;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 30px;
+}
+
+.artikal-naziv {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.artikal-slika {
+  width: 150px;
+  height: auto;
+  border: 3px solid #ffcc00;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.artikal-kolicina {
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #ff3300;
+}
+
+.na-stanju {
+  color: #00cc00;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.nema-na-stanju {
+  color: #cc0000;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.artikal-cena {
+  margin-bottom: 15px;
+  color: #ff6600;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.artikal-opis {
+  font-style: italic;
+  color: #333;
+}
+
+/* Additional styles */
+.additional-styles {
+  /* Add your custom styles here */
+  background-color: #eee;
+  color: #444;
+}

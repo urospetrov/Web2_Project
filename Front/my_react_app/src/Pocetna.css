@@ -1,0 +1,37 @@
+/* Updated styles for common links */
+.common-link {
+  text-decoration: none;
+  font-size: 20px; /* Increase font size for better visibility */
+  margin-bottom: 15px; /* Slightly increase margin */
+  color: #ff6600; /* Change link color to orange */
+  transition: color 0.3s;
+}
+
+.common-link:hover {
+  color: #ff3300; /* Change hover color to a darker orange */
+}
+
+/* Updated styles for page title */
+.page-title {
+  color: #279980;
+  font-size: 28px; /* Increase font size for emphasis */
+  margin-top: 40px; /* Slightly decrease top margin */
+}
+
+/* Updated styles for separated link sections */
+.link-section {
+  margin-top: 30px; /* Increase top margin for separation */
+  padding: 15px; /* Increase padding for better spacing */
+  border-radius: 8px; /* Increase border-radius for rounded corners */
+  background-color: #f0f0f0; /* Change background color to a lighter gray */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow */
+}
+
+.link-section p {
+  margin: 12px 0; /* Adjust paragraph margin for better spacing */
+}
+
+/* Remove margin-bottom for the last link section */
+.link-section:last-child {
+  margin-bottom: 0;
+}

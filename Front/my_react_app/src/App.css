@@ -1,0 +1,40 @@
+/* Styles for elements with class .na-stanju */
+.na-stanju {
+  color: blue;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+/* Styles for elements with class .nema-na-stanju */
+.nema-na-stanju {
+  color: crimson;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Styles for elements with class .notification */
+.notification {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 15px;
+  background-color: #ffcc00;
+  border: 2px solid #ff9900;
+  border-radius: 10px;
+  transition: transform 0.5s ease-in-out;
+  transform: scale(0);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Styles for visible notifications */
+.notification.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Styles for hidden notifications */
+.notification.hidden {
+  opacity: 0;
+  transform: scale(0);
+  pointer-events: none; /* Disable interaction with hidden notifications */
+}

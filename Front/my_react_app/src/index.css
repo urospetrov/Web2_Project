@@ -1,0 +1,20 @@
+/* Updated default styles for the body element */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif; /* Change the font family */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f0f0f0; /* Add a background color */
+  color: #333; /* Set the text color */
+}
+
+/* Updated default styles for the code element */
+code {
+  font-family: 'Courier New', monospace; /* Change the font family */
+  font-size: 14px; /* Adjust the font size */
+  background-color: #f7f7f7; /* Add a background color */
+  padding: 2px 4px; /* Add padding for code elements */
+  border: 1px solid #ccc; /* Add a border */
+  border-radius: 4px; /* Add border-radius for rounded corners */
+  color: #333; /* Set the text color */
+}

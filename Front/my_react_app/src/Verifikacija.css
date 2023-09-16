@@ -1,0 +1,75 @@
+/* Updated styles for page title */
+h1 {
+  color: #ff6600; /* Change title color to orange */
+  font-size: 32px; /* Increase font size for emphasis */
+  margin-bottom: 30px; /* Increase margin bottom for separation */
+}
+
+/* Updated styles for tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px; /* Increase margin bottom for better spacing */
+}
+
+th,
+td {
+  padding: 12px; /* Increase padding for better spacing */
+  border-bottom: 1px solid #ddd; /* Use a lighter border color */
+}
+
+th {
+  font-weight: bold;
+  background-color: #ffcc80; /* Change header background color to light orange */
+  text-align: left;
+}
+
+td img {
+  max-width: 120px; /* Slightly increase max image width */
+  height: auto;
+  border: 2px solid #ff6600; /* Change image border color to orange */
+  border-radius: 8px; /* Increase border-radius for rounded corners */
+}
+
+/* Updated styles for buttons */
+button {
+  background-color: #ff6600; /* Change button color to orange */
+  color: white;
+  border: none;
+  padding: 10px 20px; /* Increase padding for better button size */
+  border-radius: 8px; /* Increase border-radius for rounded corners */
+  cursor: pointer;
+  font-weight: bold; /* Add font weight for emphasis */
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #ff3300; /* Change hover color to a darker orange */
+}
+
+/* Updated styles for messages */
+p {
+  margin: 15px 0; /* Adjust margin for better spacing */
+  color: #555; /* Use a darker text color */
+}
+
+/* Updated styles for additional content below the table */
+#prikaz-verifikacija {
+  margin-top: 30px; /* Increase top margin for separation */
+}
+
+/* Updated red button styles */
+.red-button {
+  background-color: #d9534f;
+  color: #fff;
+  border: none;
+  padding: 10px 20px; /* Increase padding for better button size */
+  border-radius: 8px; /* Increase border-radius for rounded corners */
+  cursor: pointer;
+  font-weight: bold; /* Add font weight for emphasis */
+  transition: background-color 0.3s;
+}
+
+.red-button:hover {
+  background-color: #c9302c;
+}
