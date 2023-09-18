@@ -152,6 +152,21 @@ const Profil = () => {
         setIsSuccess(false);
       });
   };
+  
+  const containerStyle = {
+    display: 'inline-flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    width: '400px', // or 'inline-block' or 'inline-flex' depending on your needs
+  };
+
+  const innerContainerStyle = {
+    width: '50%',
+  }
+
+  const labelStyle = {
+    whiteSpace: 'nowrap',
+  };
 
   return (
     <div className="container mt-5">
@@ -163,67 +178,96 @@ const Profil = () => {
           {korisnikPodaci ? (
             <form onSubmit={handleSubmit} ref={formRef} className="mt-4">
               <div className="form-group">
-                <label>
-                  Korisnicko ime:
-                  <input
-                    type="text"
-                    name="korisnickoIme"
-                    value={formData.korisnickoIme}
-                    className="form-control"
-                    onChange={handleChange}
-                  />
-                  <p></p>
-                </label>
+                <div style={containerStyle}>
+                  <div style={innerContainerStyle}>
+                    <label style={labelStyle}>
+                      Korisnicko ime:
+                    </label>
+                  </div>
+                  <div style={innerContainerStyle}>
+                    <input
+                      type="text"
+                      name="korisnickoIme"
+                      value={formData.korisnickoIme}
+                      className="form-control"
+                      onChange={handleChange}
+                    />
+                  </div>
+                </div>
               </div>
+              <br/>
 
               <div className="form-group">
-                <label>
-                  E-mail:
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="form-control"
-                  />
-                  <p></p>
-                </label>
+                <div style={containerStyle}>
+                  <div style={innerContainerStyle}>
+                    <label style={labelStyle}>
+                      E-mail:
+                    </label>
+                  </div>
+                  <div style={innerContainerStyle}>
+                    <input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      className="form-control"
+                    />
+                  </div>
+                </div>
               </div>
+              <br/>
 
               <div className="form-group">
-                <label>
-                  Lozinka:
-                  <input
-                    type="password"
-                    name="lozinka"
-                    value={formData.lozinka}
-                    onChange={handleChange}
-                    className="form-control"
-                  />
-                  <p></p>
-                </label>
+                <div style={containerStyle}>
+                  <div style={innerContainerStyle}>
+                    <label>
+                      Lozinka:
+                    </label>
+                  </div>
+                  <div style={innerContainerStyle}>
+                    <input
+                      type="password"
+                      name="lozinka"
+                      value={formData.lozinka}
+                      onChange={handleChange}
+                      className="form-control"
+                    />
+                  </div>
+                </div>
               </div>
+              <br/>
 
               <div className="form-group">
-                <label>
-                  Potvrda lozinke:
-                  <input
-                    type="password"
-                    name="potvrdaLozinke"
-                    value={passwordConfirmation}
-                    onChange={handlePasswordConfirmationChange}
-                    className="form-control"
-                  />
-                  {passwordsMatch ? null : (
-                    <p className="text-danger">Šifre se ne podudaraju.</p>
-                  )}
-                  <p></p>
-                </label>
+                <div style={containerStyle}>
+                  <div style={innerContainerStyle}>
+                    <label>
+                      Potvrda lozinke:
+                    </label>
+                  </div>
+                  <div style={innerContainerStyle}>
+                    <input
+                      type="password"
+                      name="potvrdaLozinke"
+                      value={passwordConfirmation}
+                      onChange={handlePasswordConfirmationChange}
+                      className="form-control"
+                    />
+                    {passwordsMatch ? null : (
+                      <p className="text-danger">Šifre se ne podudaraju.</p>
+                    )}
+                  </div>
+                </div>
               </div>
+              <br/>
 
               <div className="form-group">
+                <div style={containerStyle}>
+                  <div style={innerContainerStyle}>
                 <label>
                   Ime:
+                </label>
+                  </div>
+                  <div style={innerContainerStyle}>
                   <input
                     type="text"
                     name="ime"
@@ -231,13 +275,19 @@ const Profil = () => {
                     onChange={handleChange}
                     className="form-control"
                   />
-                  <p></p>
-                </label>
+                  </div>
+                </div>
               </div>
+              <br/>
 
               <div className="form-group">
+                <div style={containerStyle}>
+                  <div style={innerContainerStyle}>
                 <label>
                   Prezime:
+                </label>
+                  </div>
+                  <div style={innerContainerStyle}>
                   <input
                     type="text"
                     name="prezime"
@@ -245,13 +295,19 @@ const Profil = () => {
                     onChange={handleChange}
                     className="form-control"
                   />
-                  <p></p>
-                </label>
+                  </div>
+                </div>
               </div>
+              <br/>
 
               <div className="form-group">
+                <div style={containerStyle}>
+                  <div style={innerContainerStyle}>
                 <label>
                   Datum rodjenja:
+                </label>
+                  </div>
+                  <div style={innerContainerStyle}>
                   <input
                     type="date"
                     name="datumRodjenja"
@@ -259,13 +315,19 @@ const Profil = () => {
                     onChange={handleChange}
                     className="form-control"
                   />
-                  <p></p>
-                </label>
+                  </div>
+                </div>
               </div>
+              <br/>
 
               <div className="form-group">
+                <div style={containerStyle}>
+                  <div style={innerContainerStyle}>
                 <label>
                   Adresa:
+                </label>
+                  </div>
+                  <div style={innerContainerStyle}>
                   <input
                     type="text"
                     name="adresa"
@@ -273,20 +335,28 @@ const Profil = () => {
                     onChange={handleChange}
                     className="form-control"
                   />
-                  <p></p>
-                </label>
+                  </div>
+                </div>
               </div>
+              <br/>
 
               <div className="form-group">
+                <div style={containerStyle}>
+                  <div style={innerContainerStyle}>
                 <label>
                   Slika:
+                </label>
+                  </div>
+                  <div style={innerContainerStyle}>
                   <ImageUploader
                     onImageUpload={handleImageUpload}
                     className="form-control"
                   />
-                  <p></p>
-                </label>
+                  </div>
+                </div>
               </div>
+              <br/>
+
               {formData.tipKorisnika === "Prodavac" && (
                 <div>
                   <div className="form-group">
@@ -304,7 +374,7 @@ const Profil = () => {
                   <br />
                 </div>
               )}
-              <button type="submit" className="btn btn-success">
+              <button type="submit" className="btn btn-primary">
                 Sacuvaj izmene
               </button>
               {isSuccess && (
@@ -320,9 +390,9 @@ const Profil = () => {
 
         <div className="col-lg-6">
           <div className="user-details">
-            <h3 style={{ color: "#279980" }}>Detalji korisnika</h3>
+            <h3 style={{ color: "#FF0450" }}>Detalji</h3>
             {korisnikPodaci && (
-              <div className="user-info" style={{ border: "1px solid #88d498", padding: "15px", backgroundColor: "#e6f7ea" }}>
+              <div className="user-info" style={{ border: "1px solid #88d498", padding: "15px", backgroundColor: "#C1E9FF" }}>
                 <p>
                   <strong>Korisničko ime:</strong>{" "}
                   {korisnikPodaci.korisnickoIme}
@@ -353,6 +423,7 @@ const Profil = () => {
               </div>
             )}
           </div>
+          <br/>
           <Link to="/ulogovan-korisnik" className="mt-3">Nazad na početnu stranicu</Link>
         </div>
       </div>

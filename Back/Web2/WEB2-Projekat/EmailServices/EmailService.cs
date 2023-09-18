@@ -22,21 +22,6 @@ namespace Shared.EmailServices
 
         public async Task SendEmailAsync(string toEmail, string subject, string message)
         {
-            //var smtpClient = new SmtpClient(_emailSettings.Host);
-            //smtpClient.Port = _emailSettings.Port;
-            //smtpClient.UseDefaultCredentials = false;
-            //smtpClient.Credentials = new NetworkCredential(_emailSettings.UserName, _emailSettings.Password);
-            //smtpClient.EnableSsl = true;
-
-            //var mailMessage = new MailMessage
-            //{
-            //    From = new MailAddress(_emailSettings.UserName),
-            //    Subject = subject,
-            //    Body = message,
-            //    IsBodyHtml = true
-            //};
-            //mailMessage.To.Add(toEmail);
-
             MailMessage mailMessage = new MailMessage();
             var smtpClient = new SmtpClient(_emailSettings.Host);
             mailMessage.From = new MailAddress(_emailSettings.UserName);

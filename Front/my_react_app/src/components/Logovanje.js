@@ -98,38 +98,65 @@ const Logovanje = () => {
     });
     google.accounts.id.prompt();
   }, []);
+  
+  const containerStyle = {
+    display: 'inline-flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    width: '400px', // or 'inline-block' or 'inline-flex' depending on your needs
+  };
+
+  const innerContainerStyle = {
+    width: '50%',
+  }
+
+  const labelStyle = {
+    whiteSpace: 'nowrap',
+  };
 
   return (
     <div className="container text-center mt-5">
       <h1 style={{ color: "#007bff" }}>Logovanje</h1>
       <form onSubmit={handleSubmit}>
       <div className="form-group">
-        <label htmlFor="text">Username:</label>
-        <input
-          type="username"
-          id="username"
-          name="Username"
-          value={formData.Username}
-          onChange={handleChange}
-          className="form-control"
-          required
-        />
-        <br />
+        <div style={containerStyle}>
+          <div style={innerContainerStyle}>
+            <label htmlFor="text">Username:</label>
+          </div>
+          <div style={innerContainerStyle}>
+            <input
+              type="username"
+              id="username"
+              name="Username"
+              value={formData.Username}
+              onChange={handleChange}
+              className="form-control"
+              required
+            />
+          </div>
         </div>
+        </div>
+        <br />
 
         <div className="form-group">
-        <label htmlFor="lozinka">Lozinka:</label>
-        <input
-          type="password"
-          id="lozinka1"
-          name="Lozinka"
-          value={formData.Lozinka}
-          onChange={handleChange}
-          className="form-control"
-          required
-        />
-        <br />
+          <div style={containerStyle}>
+            <div style={innerContainerStyle}>
+              <label htmlFor="lozinka">Lozinka:</label>
+            </div>
+            <div style={innerContainerStyle}>
+              <input
+                type="password"
+                id="lozinka1"
+                name="Lozinka"
+                value={formData.Lozinka}
+                onChange={handleChange}
+                className="form-control"
+                required
+              />
+            </div>
+          </div>
         </div>
+        <br />
 
         <button type="submit" className="btn btn-primary mt-3">Uloguj se</button>
       </form>

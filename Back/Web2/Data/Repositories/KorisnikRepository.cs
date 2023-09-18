@@ -137,7 +137,7 @@ namespace Data.Repositories
         public async Task<KorisnikRequestModel> GetKorisnik(int idKorisnika)
         {
             await _dbContext.SaveChangesAsync();
-            var k = _dbContext.Korisnici.SingleOrDefault(k => k.Id == idKorisnika);
+            var k = _dbContext.Korisnici.FirstOrDefault(k => k.Id == idKorisnika);
             KorisnikRequestModel KRM = new KorisnikRequestModel(k.KorisnickoIme, k.Email, k.Lozinka, k.Ime, k.Prezime, k.DatumRodjenja,
                 k.Adresa, k.TipKorisnika, k.SlikaKorisnika, k.Verifikovan, k.Postarina);
             return KRM;

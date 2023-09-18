@@ -19,6 +19,10 @@ const linkStyle = {
   borderRadius: "5px",
 };
 
+const centerAlign = {
+  textAlign: 'center'
+};
+
 const UlogovanKorisnik = () => {
   const getUserRole = () => {
     var token = localStorage.getItem("token");
@@ -50,9 +54,9 @@ const UlogovanKorisnik = () => {
   
 
   return (
+    <div>
+    <h1  className="page-title" style={centerAlign}>Akcije</h1>
     <div style={centerContentStyle}>
-      <h1  className="page-title">Pocetna stranica</h1>
-  
       {(role === "Kupac" || role === "Prodavac" || role === "Admin") && (
         <div className="link-section">
         <>
@@ -141,6 +145,7 @@ const UlogovanKorisnik = () => {
         </>
         
       )}
+    </div>
     </div>
   );
 };

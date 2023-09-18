@@ -268,154 +268,230 @@ const Registracija = () => {
     handleChange(e);
     setEmail(e.target.value);
   };
+  
+  const containerStyle = {
+    display: 'inline-flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    width: '400px', // or 'inline-block' or 'inline-flex' depending on your needs
+  };
+
+  const innerContainerStyle = {
+    width: '50%',
+  }
+
+  const labelStyle = {
+    whiteSpace: 'nowrap',
+  };
 
   return (
     <div className="container text-center mt-5">
-      <h1 style={{ color: "#28a745" }}>Registracija</h1>
+      <h1 style={{ color: "#FF4500" }}>Registracija</h1>
       <form onSubmit={handleSubmit}>
-      <div className="form-group">
-        <label htmlFor="korisnickoIme">Korisničko ime:</label>
-        <input
-          type="text"
-          id="korisnickoIme"
-          name="KorisnickoIme"
-          value={formData.KorisnickoIme}
-          onChange={handleChange}
-          className="form-control"
-          required
-        />
-        <br />
+        <div className="form-group">
+          <div style={containerStyle}>
+            <div style={innerContainerStyle}>
+              <label htmlFor="korisnickoIme" style={labelStyle}>Korisničko ime:</label>
+            </div>
+            <div style={innerContainerStyle}>
+              <input
+                type="text"
+                id="korisnickoIme"
+                name="KorisnickoIme"
+                value={formData.KorisnickoIme}
+                onChange={handleChange}
+                className="form-control"
+                required
+              />
+            </div>
+          </div>
         </div>
+        <br />
 
         <div className="form-group">
-        <label htmlFor="email">E-mail adresa:</label>
-        <input
-          type="email"
-          id="email"
-          name="Email"
-          value={formData.Email}
-          onChange={handleEmailChange}
-          className="form-control"
-          required
-        />
-        <br />
+          <div style={containerStyle}>
+            <div style={innerContainerStyle}>
+              <label htmlFor="email" style={labelStyle}>E-mail adresa:</label>
+            </div>
+            <div style={innerContainerStyle}>
+              <input
+                type="email"
+                id="email"
+                name="Email"
+                value={formData.Email}
+                onChange={handleEmailChange}
+                className="form-control"
+                required
+              />
+            </div>
+          </div>
         </div>
+        <br />
+
+        <div className="form-group">  
+          <div style={containerStyle}>
+            <div style={innerContainerStyle}>
+              <label htmlFor="lozinka" style={labelStyle}>Lozinka:</label>
+            </div>
+            <div style={innerContainerStyle}>
+              <input
+                type="password"
+                id="lozinka"
+                name="Lozinka"
+                value={formData.Lozinka}
+                onChange={handleChange}
+                className="form-control"
+                required
+              />
+            </div>
+          </div>
+        </div>
+        <br />
 
         <div className="form-group">
-        <label htmlFor="lozinka">Lozinka:</label>
-        <input
-          type="password"
-          id="lozinka"
-          name="Lozinka"
-          value={formData.Lozinka}
-          onChange={handleChange}
-          className="form-control"
-          required
-        />
-        <br />
+          <div style={containerStyle}>
+            <div style={innerContainerStyle}>
+              <label htmlFor="potvrdaLozinke">Potvrdi lozinku:</label>
+            </div>
+            <div style={innerContainerStyle}>
+              <input
+                type="password"
+                id="potvrdaLozinke"
+                name="PotvrdaLozinke"
+                value={passwordConfirmation}
+                onChange={handlePasswordConfirmationChange}
+                className="form-control"
+                required
+              />
+            </div>
+          </div>
         </div>
-
-        <div className="form-group">
-        <label htmlFor="potvrdaLozinke">Potvrdi lozinku:</label>
-        <input
-          type="password"
-          id="potvrdaLozinke"
-          name="PotvrdaLozinke"
-          value={passwordConfirmation}
-          onChange={handlePasswordConfirmationChange}
-          className="form-control"
-          required
-        />
         <br />
-        </div>
 
         {!isPasswordMatch && (
           <div style={{ color: "red" }}>Lozinke se ne podudaraju.</div>
         )}
 
         <div className="form-group">
-        <label htmlFor="ime">Ime:</label>
-        <input
-          type="text"
-          id="ime"
-          name="Ime"
-          value={formData.Ime}
-          onChange={handleChange}
-          className="form-control"
-          required
-        />
-        <br />
+          <div style={containerStyle}>
+            <div style={innerContainerStyle}>
+              <label htmlFor="ime">Ime:</label>  
+            </div>
+            <div style={innerContainerStyle}>
+              <input
+                type="text"
+                id="ime"
+                name="Ime"
+                value={formData.Ime}
+                onChange={handleChange}
+                className="form-control"
+                required
+              />
+            </div>
+          </div>
         </div>
+        <br />
 
         <div className="form-group">
-        <label htmlFor="prezime">Prezime:</label>
-        <input
-          type="text"
-          id="prezime"
-          name="Prezime"
-          value={formData.Prezime}
-          onChange={handleChange}
-          className="form-control"
-          required
-        />
-        <br />
+          <div style={containerStyle}>
+            <div style={innerContainerStyle}>
+              <label htmlFor="prezime">Prezime:</label>
+            </div>
+            <div style={innerContainerStyle}>
+            <input
+              type="text"
+              id="prezime"
+              name="Prezime"
+              value={formData.Prezime}
+              onChange={handleChange}
+              className="form-control"
+              required
+            />
+            </div>
+          </div>
         </div>
+        <br />
 
         <div className="form-group">
-        <label htmlFor="datumRodjenja">Datum rođenja:</label>
-        <input type="date" value={selectDate} onChange={handleDateChange} className="form-control" />
-        <br />
+          <div style={containerStyle}>
+            <div style={innerContainerStyle}>
+              <label htmlFor="datumRodjenja" style={labelStyle}>Datum rođenja:</label>
+            </div>
+            <div style={innerContainerStyle}>
+              <input type="date" value={selectDate} onChange={handleDateChange} className="form-control" />
+            </div>
+          </div>
         </div>
+        <br />
 
         <div className="form-group">
-        <label htmlFor="adresa">Adresa:</label>
-        <input
-          type="text"
-          id="adresa"
-          name="Adresa"
-          value={formData.Adresa}
-          onChange={handleChange}
-          className="form-control"
-          required
-        />
-        <br />
+          <div style={containerStyle}>
+            <div style={innerContainerStyle}>
+              <label htmlFor="adresa">Adresa:</label>
+            </div>
+            <div style={innerContainerStyle}>
+              <input
+                type="text"
+                id="adresa"
+                name="Adresa"
+                value={formData.Adresa}
+                onChange={handleChange}
+                className="form-control"
+                required
+              />
+            </div>
+          </div>
         </div>
+        <br />
 
         <div className="form-group">
-        <label htmlFor="TipKorisnika">Tip korisnika:</label>
-        <select
-          id="tipKorisnika"
-          name="TipKorisnika"
-          value={formData.TipKorisnika}
-          onChange={handleTipChange}
-          className="form-control"
-          required
-        >
-          <option value="Kupac">Kupac</option>
-          <option value="Prodavac">Prodavac</option>
-        </select>
-        <br />
+          <div style={containerStyle}>
+            <div style={innerContainerStyle}>
+              <label htmlFor="TipKorisnika">Tip korisnika:</label>
+            </div>
+            <div style={innerContainerStyle}>
+              <select
+                id="tipKorisnika"
+                name="TipKorisnika"
+                value={formData.TipKorisnika}
+                onChange={handleTipChange}
+                className="form-control"
+                required
+              >
+                <option value="Kupac">Kupac</option>
+                <option value="Prodavac">Prodavac</option>
+              </select>
+            </div>
+          </div>
         </div>
+        <br />
 
         {formData.TipKorisnika === "Prodavac" && (
           <div>
             <div className="form-group">
-            <label htmlFor="postarina">Postarina:</label>
-            <input
-              type="number"
-              id="postarina"
-              name="Postarina"
-              value={formData.Postarina}
-              onChange={handlePostarinaChange}
-              className="form-control"
-              required
-            />
-            <br />
+              <div style={containerStyle}>
+                <div style={innerContainerStyle}>
+                  <label htmlFor="postarina">Postarina:</label>
+                </div>
+                <div style={innerContainerStyle}>
+                  <input
+                    type="number"
+                    id="postarina"
+                    name="Postarina"
+                    value={formData.Postarina}
+                    onChange={handlePostarinaChange}
+                    className="form-control"
+                    required
+                  />
+                </div>
+              </div>
             </div>
+            <br />
           </div>
         )}
         <div className="form-group">
         <label htmlFor="slika">Slika profila:</label>
+        <br/>
         <ImageUploader onImageUpload={handleImageUpload} className="form-control mr-2" />
         
         
@@ -425,7 +501,7 @@ const Registracija = () => {
 
 
 
-        <button type="submit" className="btn btn-success mt-3">Registruj se</button>
+        <button type="submit" className="btn btn-primary mt-3">Registruj se</button>
       </form>
 
       {showNotification && (
@@ -436,7 +512,7 @@ const Registracija = () => {
       <div>
 
         <div className="mt-4">
-          <h1 style={{ color: "#28a745" }}>Prijavite se preko google naloga</h1>
+          <h1 style={{ color: "#FF0450" }}>Prijava putem Google naloga</h1>
           <select id="mojDropdown">
             <option value="Kupac">Kupac</option>
             <option value="Prodavac">Prodavac</option>

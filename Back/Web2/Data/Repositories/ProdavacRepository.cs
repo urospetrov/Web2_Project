@@ -24,7 +24,7 @@ namespace Data.Repositories
 
         public  async Task<ProdavacRequestModel> Post(ProdavacRequestModel prodavacRequestModel)
         {
-            var korisnik = await _dBContext.Korisnici.SingleOrDefaultAsync(k => k.Id == prodavacRequestModel.KorisnikId);
+            var korisnik = await _dBContext.Korisnici.FirstOrDefaultAsync(k => k.Id == prodavacRequestModel.KorisnikId);
 
             Prodavac p = new Prodavac();
             p.KorisnikId = korisnik.Id;
@@ -34,7 +34,7 @@ namespace Data.Repositories
              _dBContext.Prodavci.Add(p);
             await _dBContext.SaveChangesAsync();
 
-            var prodavac = await _dBContext.Prodavci.SingleOrDefaultAsync(p=>p.KorisnikId == prodavacRequestModel.KorisnikId);
+            var prodavac = await _dBContext.Prodavci.FirstOrDefaultAsync(p=>p.KorisnikId == prodavacRequestModel.KorisnikId);
 
             ProdavacRequestModel prm= new ProdavacRequestModel();
             prm.Verifikovan = prodavac.Verifikovan;
@@ -46,13 +46,13 @@ namespace Data.Repositories
 
         public async Task<bool> DeleteProdavac(int idProdavca)
         {
-            var prodavac = await _dBContext.Prodavci.SingleOrDefaultAsync(p => p.Id == idProdavca);
+            var prodavac = await _dBContext.Prodavci.FirstOrDefaultAsync(p => p.Id == idProdavca);
             if (prodavac == null)
             {
                 return false;
             }
 
-            var korisnik = await _dBContext.Korisnici.SingleOrDefaultAsync(k => k.Id == prodavac.KorisnikId);
+            var korisnik = await _dBContext.Korisnici.FirstOrDefaultAsync(k => k.Id == prodavac.KorisnikId);
             _dBContext.Korisnici.Remove(korisnik);
             await _dBContext.SaveChangesAsync();
             return true;
@@ -62,7 +62,7 @@ namespace Data.Repositories
         public async Task<ICollection<Artikal>> GetAllArtikalsOfProdavac(int idProdavca)
         {
             await _dBContext.SaveChangesAsync();
-            var prodavac=await _dBContext.Prodavci.SingleOrDefaultAsync(p=> p.Id == idProdavca);
+            var prodavac=await _dBContext.Prodavci.FirstOrDefaultAsync(p=> p.Id == idProdavca);
             var artikli = prodavac.Artikli.ToList();
             return artikli;
 

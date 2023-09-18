@@ -71,7 +71,7 @@ namespace Data.Repositories
 
         public async Task<ICollection<ArtikalRequestModel>> GetAllArtikalsOfProdavac(int idKorisnik)
         {
-            var prodavac = await _dbContext.Prodavci.Where(p => p.KorisnikId == idKorisnik).SingleOrDefaultAsync();
+            var prodavac = await _dbContext.Prodavci.Where(p => p.KorisnikId == idKorisnik).FirstOrDefaultAsync();
             var artikli = await _dbContext.Artikli.Where(a => a.ProdavacID == prodavac.Id).ToListAsync();
             var artikliFinal=new List<ArtikalRequestModel>();
 

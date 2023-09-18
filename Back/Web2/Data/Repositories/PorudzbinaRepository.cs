@@ -84,7 +84,7 @@ namespace Data.Repositories
 
         public async Task<bool> DeletePorudzbina(int idPorudzbine)
         {
-            var porudzbina = await _dbContext.Porudzbine.SingleOrDefaultAsync(p => p.Id == idPorudzbine); //nije dobro jer vraca true ili false
+            var porudzbina = await _dbContext.Porudzbine.FirstOrDefaultAsync(p => p.Id == idPorudzbine); //nije dobro jer vraca true ili false
             if (porudzbina == null)
             {
                 return false;
@@ -108,7 +108,7 @@ namespace Data.Repositories
                 {
                     if(p.Id==ap.PorudzbineId)
                     {
-                        var artikal=await _dbContext.Artikli.Where(a=>a.Id==ap.ArtikliId).SingleOrDefaultAsync();
+                        var artikal=await _dbContext.Artikli.Where(a=>a.Id==ap.ArtikliId).FirstOrDefaultAsync();
                         p.Artikli.Add(artikal);
                     }
                 }
@@ -152,7 +152,7 @@ namespace Data.Repositories
 
         public async Task<Porudzbina> GetPorudzbina(int idPorudzbinaId)
         {
-            var result = await _dbContext.Porudzbine.SingleOrDefaultAsync(p=> p.Id==idPorudzbinaId);
+            var result = await _dbContext.Porudzbine.FirstOrDefaultAsync(p=> p.Id==idPorudzbinaId);
             if(result == null)
             {
                 return null;
@@ -162,7 +162,7 @@ namespace Data.Repositories
 
         public async Task<bool> PatchPorudzbina(int idPorudzbine, PorudzbinaRequestModel model)
         {
-            var porudzbina = await _dbContext.Porudzbine.SingleOrDefaultAsync(p=> p.Id==idPorudzbine);
+            var porudzbina = await _dbContext.Porudzbine.FirstOrDefaultAsync(p=> p.Id==idPorudzbine);
             if (porudzbina == null)
             {
                 return false;
@@ -180,8 +180,8 @@ namespace Data.Repositories
             var artikliProdavca = new List<Artikal>();
             var temp=new List<Porudzbina>();
 
-            var korisnik= await _dbContext.Korisnici.SingleOrDefaultAsync(k=>k.Id==korisnikId);
-            var prodavac = await _dbContext.Prodavci.SingleOrDefaultAsync(p => p.KorisnikId == korisnikId);
+            var korisnik= await _dbContext.Korisnici.FirstOrDefaultAsync(k=>k.Id==korisnikId);
+            var prodavac = await _dbContext.Prodavci.FirstOrDefaultAsync(p => p.KorisnikId == korisnikId);
             var sviArtikli = await _dbContext.Artikli.ToListAsync();
 
             if (prodavac == null)
@@ -233,8 +233,8 @@ namespace Data.Repositories
             var artikliProdavca = new List<Artikal>();
             var temp=new List<Porudzbina>();
 
-            var korisnik = await _dbContext.Korisnici.SingleOrDefaultAsync(k => k.Id == korisnikId);
-            var prodavac = await _dbContext.Prodavci.SingleOrDefaultAsync(p => p.KorisnikId == korisnikId);
+            var korisnik = await _dbContext.Korisnici.FirstOrDefaultAsync(k => k.Id == korisnikId);
+            var prodavac = await _dbContext.Prodavci.FirstOrDefaultAsync(p => p.KorisnikId == korisnikId);
             var sviArtikli = await _dbContext.Artikli.ToListAsync();
 
             if (prodavac == null)
